@@ -12,14 +12,27 @@ public class Decisions {
      * complex hierarchy of types of words. Etc.
      */
     private final String[] words;
+    
+    private final List[String] baseList = {"Big or small?", "Sun or moon?", "Cat or mouse?", "Blue or red?", "Earth or sky?", \
+    "Wine or beer?", "Coffee or tea?", "Shark or whale?", "Doctor or lawyer?", "Glasses or contacts?", "Socks or shoes?"};
+    
+    private final List[String] animalList = {"ant", "bird", "cat", "chicken","cow", "dog", "elephant", "fish", "fox", "horse", \
+    "kangaroo", "lion", "monkey", "penguin", "pig", "rabbit", "sheep", "tiger", "whale", "wolf"};
+    
+    private final List[String] clothingList = {"shirt", "slacks", "dress", "skirt", "hat", "onesie", "jeans", "bikini"};
+    
+    private final List[String] foodList = {"omelette", "pasta", "rice", "meatloaf"};
 
 
     /**
      * Create a new Decisions object. Load decision words from resources file and prepare pool of
      * words to be used for decision making.
+     * Current structure will be a set of "base" binary pairs that are created by hand, and then additional
+     * pairs that will be randomly generated from a resource file.
      * @param words String[] of words used for making decisions.
      */
     public Decisions(String[] words) {
+        
         this.words = words;
     }
 
